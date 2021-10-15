@@ -1,0 +1,19 @@
+@include media-breakpoint-up(lg) {
+  .elem.elem--backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: .15s;
+    background-color: rgba(#000, .2);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

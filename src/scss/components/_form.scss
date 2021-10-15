@@ -1,0 +1,43 @@
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: .2s;
+  color: $mid-gray-2;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 10px;
+  transition: .2s;
+  border: 2px solid $light-gray-2;
+  border-radius: 0;
+  font-family: $font-montserrat;
+  font-size: 14px;
+
+  &::placeholder {
+    color: $mid-gray;
+  }
+
+  &:focus,
+  &:active,
+  &.has-value {
+    border-color: $light-gray-3;
+    outline: 0;
+
+    ~ .label {
+      top: 0;
+      padding: 0 6px;
+      transform: 0;
+      background-color: #fff;
+      font-size: 12px;
+    }
+  }
+}
